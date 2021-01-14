@@ -1,0 +1,90 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* use viewport-relative units to cover page fully */
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* include border and padding in element width and height */
+* {
+  box-sizing: border-box;
+}
+
+.cover {
+   height: 100%;
+  width: 100%;
+
+   /* Location of the image */
+   background-image: url(img/cover.jpg);
+   
+   /* Background image is centered vertically and horizontally at all times */
+   background-position: center center;
+   
+   /* Background image doesn't tile */
+   background-repeat: no-repeat;
+   
+   /* Background image is fixed in the viewport so that it doesn't move when 
+      the content's height is greater than the image's height */
+   background-attachment: fixed;
+   
+   /* This is what makes the background image rescale based
+      on the container's size */
+   background-size: cover;
+}
+
+.cover-text {
+   color: white;
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font: 18px/23px "Cantarell", sans-serif;
+   text-align: center;
+}
+
+.cover-text h1 {
+   text-transform: uppercase;
+   line-height: 50px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   line-height: 70px; 
+   font-size: 80px;
+   font-weight: bold;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cover-text a {
+   text-decoration: none;
+   color: white;
+   border: 2px solid #FFFFFF;
+   box-sizing: border-box;
+   border-radius: 45px;
+   padding: 20px;
+   font-size: 25px;
+   margin: 10px;
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   font-weight: bold;
+   opacity: 0.6;
+   transition: 0.3s;
+}
+
+.cover-text a:hover {
+   opacity: 1;
+}
+
+@media only screen and (max-width: 1000px) {
+   .cover-text a {
+      padding: 10px;
+      margin: 3px;
+   }
+
+   .cover-text h1 {
+      font-size: 75px;
+   }
+}
